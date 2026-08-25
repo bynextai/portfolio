@@ -28,6 +28,15 @@ import {
   BarChart3,
   Circle,
   Clock,
+  ArrowRight,
+  ArrowUpRight,
+  ChevronRight,
+  Check,
+  CheckCircle2,
+  Phone,
+  Mail,
+  ExternalLink,
+  Shield,
 } from "lucide-react";
 
 const iconMap = {
@@ -60,10 +69,19 @@ const iconMap = {
   BarChart3,
   Circle,
   Clock,
+  ArrowRight,
+  ArrowUpRight,
+  ChevronRight,
+  Check,
+  CheckCircle2,
+  Phone,
+  Mail,
+  ExternalLink,
+  Shield,
 };
 
 // Central icon resolver so data files can reference icons by string name
 export default function Icon({ name, className = "h-5 w-5", ...props }) {
-  const LucideIcon = iconMap[name] || Circle;
+  const LucideIcon = iconMap[name] || ArrowRight;
   return <LucideIcon className={className} aria-hidden="true" {...props} />;
 }
