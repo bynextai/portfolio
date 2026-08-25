@@ -1,8 +1,69 @@
-import * as icons from "lucide-react";
+import {
+  MonitorSmartphone,
+  Server,
+  Database,
+  Smartphone,
+  GitBranch,
+  BrainCircuit,
+  Code2,
+  AppWindow,
+  Sparkles,
+  GraduationCap,
+  HeartPulse,
+  ShoppingCart,
+  Landmark,
+  Building2,
+  Truck,
+  Rocket,
+  Store,
+  Target,
+  Gauge,
+  TrendingUp,
+  Cpu,
+  MessagesSquare,
+  LifeBuoy,
+  Layers,
+  Braces,
+  Globe,
+  BarChart3,
+  Circle,
+  Clock,
+} from "lucide-react";
+
+const iconMap = {
+  MonitorSmartphone,
+  Server,
+  Database,
+  Smartphone,
+  GitBranch,
+  BrainCircuit,
+  Code2,
+  AppWindow,
+  Sparkles,
+  GraduationCap,
+  HeartPulse,
+  ShoppingCart,
+  Landmark,
+  Building2,
+  Truck,
+  Rocket,
+  Store,
+  Target,
+  Gauge,
+  TrendingUp,
+  Cpu,
+  MessagesSquare,
+  LifeBuoy,
+  Layers,
+  Braces,
+  Globe,
+  BarChart3,
+  Circle,
+  Clock,
+};
 
 // Central icon resolver so data files can reference icons by string name
-// (keeps data/*.js JSON-serializable and free of JSX/component imports).
 export default function Icon({ name, className = "h-5 w-5", ...props }) {
-  const LucideIcon = icons[name] || icons.Circle;
+  const LucideIcon = iconMap[name] || Circle;
   return <LucideIcon className={className} aria-hidden="true" {...props} />;
 }

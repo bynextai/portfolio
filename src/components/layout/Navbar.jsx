@@ -13,17 +13,14 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [lastPathname, setLastPathname] = useState(pathname);
   const dropdownRef = useRef(null);
 
-  // Close menus on route change without a setState-in-effect cascade:
-  // derive the reset during render by comparing to the previous pathname.
-  if (pathname !== lastPathname) {
-    setLastPathname(pathname);
+  // Close mobile & dropdown menus smoothly when route changes
+  useEffect(() => {
     setMobileOpen(false);
     setServicesOpen(false);
     setMobileServicesOpen(false);
-  }
+  }, [pathname]);
 
   useEffect(() => {
     function handleClickOutside(event) {
