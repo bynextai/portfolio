@@ -158,3 +158,20 @@ select:focus-visible,
 .perspective-1000 {
   perspective: 1000px;
 }
+
+/* Hide Netlify floating badges, toolbars, and drawer widgets */
+netlify-drawer,
+[data-netlify-badge],
+.netlify-badge,
+#netlify-badge,
+[id*="netlify-badge"],
+[id*="netlify-drawer"],
+iframe[src*="netlify"],
+iframe[title*="Netlify"],
+div[class*="netlify-drawer"],
+div[class*="netlify-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
