@@ -18,9 +18,6 @@ export default function Hero() {
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-brand-blue/5 px-3 py-1 text-xs font-semibold text-brand-blue">
-              Web &bull; Mobile &bull; Software &bull; AI
-            </span>
             <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-brand-navy sm:text-5xl lg:text-[3.25rem]">
               Build. Innovate.{" "}
               <span className="text-brand-blue">Grow with Bynext AI.</span>

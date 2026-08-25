@@ -8,7 +8,6 @@ export default function WhyChooseUs() {
     <section className="bg-white py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Why Bynext AI"
           title="Why Businesses Choose Bynext AI"
           description="Reliable engineering, modern technology and long-term partnership built into every project we deliver."
         />

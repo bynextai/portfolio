@@ -10,7 +10,6 @@ export default function ServicesPreview({ showHeading = true }) {
       <Container>
         {showHeading && (
           <SectionHeading
-            eyebrow="What We Do"
             title="Our Technology Services"
             description="From your first idea to a production-ready product, we build technology designed to perform."
           />

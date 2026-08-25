@@ -14,7 +14,6 @@ export default function Technologies() {
       <Container>
         <SectionHeading
           light
-          eyebrow="Our Stack"
           title="Technologies We Work With"
           description="A modern ecosystem across frontend, backend, data, mobile, DevOps and AI."
         />

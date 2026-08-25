@@ -8,7 +8,6 @@ export default function Industries() {
     <section className="bg-white py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Who We Serve"
           title="Solutions Across Industries"
         />
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">

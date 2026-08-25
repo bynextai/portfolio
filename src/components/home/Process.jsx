@@ -7,7 +7,6 @@ export default function Process() {
     <section className="bg-slate-50/60 py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Our Process"
           title="How We Build Your Solution"
         />
 

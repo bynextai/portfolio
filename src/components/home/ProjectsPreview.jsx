@@ -11,7 +11,6 @@ export default function ProjectsPreview() {
     <section className="bg-slate-50/60 py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Our Work"
           title="Ideas Into Digital Products"
           description="A glimpse of the kind of solutions we build across web, mobile, software and AI."
         />

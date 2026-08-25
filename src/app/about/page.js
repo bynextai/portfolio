@@ -31,7 +31,6 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Bynext AI"
         title="Technology That Moves Your Business Forward"
         description="Bynext AI is a technology company focused on building reliable, scalable and user-focused digital solutions. From websites and mobile applications to custom software and AI-powered platforms, we help businesses turn ideas into practical technology."
       />

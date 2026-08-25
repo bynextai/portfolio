@@ -24,7 +24,6 @@ export default function ProjectsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHero
-        eyebrow="Our Work"
         title="Ideas Into Digital Products"
         description="A look at the kind of solutions Bynext AI builds across web, mobile, software and AI. Sample projects shown below illustrate our range of work."
       />

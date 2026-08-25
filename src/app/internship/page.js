@@ -25,7 +25,6 @@ export default function InternshipPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHero
-        eyebrow="Internship"
         title="Launch Your Tech Career with Bynext AI"
         description="Gain practical industry experience by working on real-world projects with modern technologies."
       />

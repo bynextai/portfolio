@@ -9,7 +9,6 @@ export default function InternshipPreview() {
     <section className="bg-white py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Internship"
           title="Launch Your Tech Career with Bynext AI"
           description="Gain practical industry experience by working on real-world projects with modern technologies."
         />

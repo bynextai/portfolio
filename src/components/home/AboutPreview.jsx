@@ -24,7 +24,6 @@ export default function AboutPreview() {
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <SectionHeading
             align="left"
-            eyebrow="About Bynext AI"
             title="Technology That Moves Your Business Forward"
             description="Bynext AI is a technology company focused on building reliable, scalable and user-focused digital solutions. From websites and mobile applications to custom software and AI-powered platforms, we help businesses turn ideas into practical technology."
           />

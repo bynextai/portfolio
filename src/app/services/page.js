@@ -23,7 +23,6 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHero
-        eyebrow="What We Do"
         title="Our Technology Services"
         description="From your first idea to a production-ready product, we build technology designed to perform."
       />
