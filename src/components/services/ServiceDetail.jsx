@@ -13,12 +13,14 @@ export default function ServiceDetail({ service }) {
       <section className="border-b border-white/5 bg-brand-navy py-16 sm:py-20">
         <Container>
           <div className="max-w-2xl">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/20 text-brand-blue">
-              <Icon name={service.icon} className="h-6 w-6" />
-            </span>
-            <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              {service.title}
-            </h1>
+            <div className="flex items-center gap-4">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-blue/20 text-brand-blue">
+                <Icon name={service.icon} className="h-6 w-6" />
+              </span>
+              <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                {service.title}
+              </h1>
+            </div>
             <p className="mt-4 text-base leading-relaxed text-white/70 sm:text-lg">
               {service.description}
             </p>

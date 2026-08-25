@@ -25,7 +25,6 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHero
-        eyebrow="Get In Touch"
         title="Let's Build Something Great Together"
         description="Reach out and let's discuss how Bynext AI can bring your project to life."
       />
