@@ -36,8 +36,8 @@ export default function Footer() {
   return (
     <footer className="bg-brand-navy">
       <Container className="py-16">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-          <div className="sm:col-span-2 lg:col-span-1">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-5 lg:gap-10">
+          <div className="col-span-2 sm:col-span-4 lg:col-span-1">
             <Logo dark />
             <p className="mt-4 max-w-xs text-sm text-white/60">
               Building reliable digital solutions for the modern world.
