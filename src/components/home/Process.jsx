@@ -15,9 +15,15 @@ export default function Process() {
             className="absolute left-1/2 top-6 hidden h-px w-full max-w-5xl -translate-x-1/2 bg-brand-blue/20 lg:block"
             aria-hidden="true"
           />
-          <ol className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6 lg:gap-4">
-            {processSteps.map((step) => (
+          <ol className="grid grid-cols-1 gap-8 lg:grid-cols-6 lg:gap-4">
+            {processSteps.map((step, index) => (
               <li key={step.number} className="relative flex gap-4 lg:flex-col lg:gap-0 lg:text-center">
+                {index < processSteps.length - 1 && (
+                  <span
+                    className="absolute left-6 top-6 -bottom-8 w-0.5 -translate-x-1/2 bg-brand-blue/20 lg:hidden"
+                    aria-hidden="true"
+                  />
+                )}
                 <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-brand-blue ring-4 ring-brand-blue/10 lg:mx-auto">
                   {step.number}
                 </div>
