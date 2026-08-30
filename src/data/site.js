@@ -45,6 +45,7 @@ export const navLinks = [
     ],
   },
   { label: "Internship", href: "/internship" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -54,6 +55,7 @@ export const footerLinks = {
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
     { label: "Internship", href: "/internship" },
+    { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
   ],
   services: [

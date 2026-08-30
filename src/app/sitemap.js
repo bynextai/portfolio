@@ -3,7 +3,7 @@ import { services } from "@/data/services";
 import { internships } from "@/data/internships";
 
 export default function sitemap() {
-  const staticRoutes = ["", "/about", "/services", "/internship", "/projects", "/contact"];
+  const staticRoutes = ["", "/about", "/services", "/internship", "/careers", "/projects", "/contact"];
 
   const serviceRoutes = services.map((service) => `/services/${service.slug}`);
   const internshipRoutes = internships.map(

@@ -15,9 +15,12 @@ export const metadata = {
   title: `${site.name} | ${site.tagline}`,
   description: site.description,
   icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
-    apple: "/logo.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/image.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   alternates: {
     canonical: "/",
@@ -27,6 +30,14 @@ export const metadata = {
     description: site.description,
     url: site.url,
     siteName: site.name,
+    images: [
+      {
+        url: "/image.png",
+        width: 1200,
+        height: 1200,
+        alt: "Bynext AI Logo",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -34,6 +45,7 @@ export const metadata = {
     card: "summary_large_image",
     title: `${site.name} | ${site.tagline}`,
     description: site.description,
+    images: ["/image.png"],
   },
   robots: {
     index: true,
