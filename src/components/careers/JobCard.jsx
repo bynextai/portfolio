@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Briefcase, MapPin, Clock, CheckCircle2, ChevronRight, X, Send } from "lucide-react";
+import { Briefcase, MapPin, CheckCircle2, X, Send } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 export default function JobCard({ position }) {
@@ -22,7 +22,7 @@ export default function JobCard({ position }) {
   };
 
   return (
-    <div className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 hover:border-brand-blue/40 hover:shadow-lg">
+    <div className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-6 sm:p-8 shadow-sm transition-colors transition-shadow duration-300 hover:border-brand-blue/40 hover:shadow-lg">
       <div>
         <div className="flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-semibold text-brand-blue">
@@ -60,8 +60,8 @@ export default function JobCard({ position }) {
             Key Responsibilities
           </h4>
           <ul className="mt-2.5 space-y-2">
-            {position.responsibilities.map((resp, i) => (
-              <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
+            {position.responsibilities.map((resp) => (
+              <li key={resp} className="flex items-start gap-2 text-xs text-slate-600">
                 <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-blue" />
                 <span>{resp}</span>
               </li>
@@ -74,8 +74,8 @@ export default function JobCard({ position }) {
             Requirements
           </h4>
           <ul className="mt-2.5 space-y-2">
-            {position.requirements.map((req, i) => (
-              <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
+            {position.requirements.map((req) => (
+              <li key={req} className="flex items-start gap-2 text-xs text-slate-600">
                 <span className="mt-1 h-1.5 w-1.5 rounded-full bg-brand-blue/60 shrink-0" />
                 <span>{req}</span>
               </li>
@@ -96,6 +96,8 @@ export default function JobCard({ position }) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 p-4 backdrop-blur-sm">
           <div className="relative w-full max-w-lg rounded-2xl bg-white p-6 sm:p-8 shadow-2xl">
             <button
+              type="button"
+              aria-label="Close modal"
               onClick={() => {
                 setIsOpen(false);
                 setSubmitted(false);
@@ -121,13 +123,15 @@ export default function JobCard({ position }) {
 
                 <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                   <div>
-                    <label className="block text-xs font-medium text-slate-700">
+                    <label htmlFor={`job-name-${position.id || position.title}`} className="block text-xs font-medium text-slate-700">
                       Full Name *
                     </label>
                     <input
+                      id={`job-name-${position.id || position.title}`}
                       type="text"
                       required
                       placeholder="e.g. Rahul Sharma"
+                      aria-label="Full Name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
@@ -136,13 +140,15 @@ export default function JobCard({ position }) {
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                      <label className="block text-xs font-medium text-slate-700">
+                      <label htmlFor={`job-email-${position.id || position.title}`} className="block text-xs font-medium text-slate-700">
                         Email Address *
                       </label>
                       <input
+                        id={`job-email-${position.id || position.title}`}
                         type="email"
                         required
                         placeholder="you@example.com"
+                        aria-label="Email Address"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
@@ -150,13 +156,15 @@ export default function JobCard({ position }) {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-700">
+                      <label htmlFor={`job-phone-${position.id || position.title}`} className="block text-xs font-medium text-slate-700">
                         Phone Number *
                       </label>
                       <input
+                        id={`job-phone-${position.id || position.title}`}
                         type="tel"
                         required
                         placeholder="+91 98765 43210"
+                        aria-label="Phone Number"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
@@ -166,12 +174,14 @@ export default function JobCard({ position }) {
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                      <label className="block text-xs font-medium text-slate-700">
+                      <label htmlFor={`job-portfolio-${position.id || position.title}`} className="block text-xs font-medium text-slate-700">
                         Portfolio / GitHub / LinkedIn
                       </label>
                       <input
+                        id={`job-portfolio-${position.id || position.title}`}
                         type="url"
                         placeholder="https://..."
+                        aria-label="Portfolio, GitHub or LinkedIn link"
                         value={formData.portfolio}
                         onChange={(e) => setFormData({ ...formData, portfolio: e.target.value })}
                         className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
@@ -179,12 +189,14 @@ export default function JobCard({ position }) {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-700">
+                      <label htmlFor={`job-exp-${position.id || position.title}`} className="block text-xs font-medium text-slate-700">
                         Years of Experience
                       </label>
                       <input
+                        id={`job-exp-${position.id || position.title}`}
                         type="text"
                         placeholder="e.g. 2 Years"
+                        aria-label="Years of Experience"
                         value={formData.experience}
                         onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
                         className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
@@ -193,12 +205,14 @@ export default function JobCard({ position }) {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-slate-700">
+                    <label htmlFor={`job-msg-${position.id || position.title}`} className="block text-xs font-medium text-slate-700">
                       Short Introduction / Cover Note
                     </label>
                     <textarea
+                      id={`job-msg-${position.id || position.title}`}
                       rows={3}
                       placeholder="Tell us briefly about your skills and why you'd like to join Bynext AI..."
+                      aria-label="Short Introduction or Cover Note"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"

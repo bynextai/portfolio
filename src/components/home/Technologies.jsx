@@ -68,7 +68,7 @@ export default function Technologies() {
           {filteredGroups.map((group) => (
             <div
               key={group.key}
-              className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6 transition-all duration-300 hover:border-brand-blue/50 hover:bg-white/[0.07] hover:shadow-xl hover:shadow-brand-blue/10"
+              className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6 transition-colors transition-shadow duration-300 hover:border-brand-blue/50 hover:bg-white/[0.07] hover:shadow-xl hover:shadow-brand-blue/10"
             >
               <div>
                 <div className="flex items-center justify-between gap-3">

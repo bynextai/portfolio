@@ -24,7 +24,9 @@ export default function CareersPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
       />
 
       <PageHero
@@ -44,7 +46,7 @@ export default function CareersPage() {
             {careerBenefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="rounded-2xl border border-slate-100 bg-slate-50/50 p-6 transition-all hover:border-brand-blue/30 hover:bg-white hover:shadow-md"
+                className="rounded-2xl border border-slate-100 bg-slate-50/50 p-6 transition-colors transition-shadow hover:border-brand-blue/30 hover:bg-white hover:shadow-md"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/10 text-brand-blue">
                   <Icon name={benefit.icon} className="h-6 w-6" />

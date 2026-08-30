@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-md shadow-slate-200/70 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-blue/15 hover:border-brand-blue/30">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-md shadow-slate-200/70 transition-transform transition-shadow transition-colors duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-blue/15 hover:border-brand-blue/30">
       <div className={`relative flex h-52 w-full items-end justify-between overflow-hidden bg-gradient-to-br ${project.accent} p-4`}>
         {project.image && (
           <Image

@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl border border-blue-500/20 bg-gradient-to-br from-brand-navy via-[#0f1533] to-brand-blue-dark p-6 shadow-2xl shadow-brand-blue/30 sm:p-8 transition-all duration-300 hover:shadow-brand-blue/50 hover:-translate-y-1">
+            <div className="relative overflow-hidden rounded-2xl border border-blue-500/20 bg-gradient-to-br from-brand-navy via-[#0f1533] to-brand-blue-dark p-6 shadow-2xl shadow-brand-blue/30 sm:p-8 transition-transform transition-shadow duration-300 hover:shadow-brand-blue/50 hover:-translate-y-1">
               <svg
                 viewBox="0 0 400 320"
                 className="h-64 w-full sm:h-80"

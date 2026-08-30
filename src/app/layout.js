@@ -76,11 +76,15 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} antialiased bg-brand-white text-brand-navy`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
+          }}
         />
         <a
           href="#main-content"

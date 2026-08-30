@@ -35,7 +35,9 @@ export default async function InternshipDetailPage({ params }) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbs).replace(/</g, "\\u003c"),
+        }}
       />
       <InternshipDetail internship={internship} />
     </>

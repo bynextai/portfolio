@@ -18,7 +18,7 @@ export default function ServicesPreview({ showHeading = true }) {
           {services.map((service) => (
             <div
               key={service.slug}
-              className="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-md shadow-slate-200/70 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-blue/15 hover:border-brand-blue/30"
+              className="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-md shadow-slate-200/70 transition-transform transition-shadow transition-colors duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-blue/15 hover:border-brand-blue/30"
             >
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-blue/10 text-brand-blue">
