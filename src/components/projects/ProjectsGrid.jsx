@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectModal";
 import { projects, projectCategories } from "@/data/projects";
 
 export default function ProjectsGrid() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const filteredProjects =
     activeCategory === "All"
@@ -35,7 +37,11 @@ export default function ProjectsGrid() {
 
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            onViewProject={(p) => setSelectedProject(p)}
+          />
         ))}
       </div>
 
@@ -43,6 +49,13 @@ export default function ProjectsGrid() {
         <p className="mt-10 text-center text-sm text-slate-500">
           No projects found in this category yet.
         </p>
+      )}
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
       )}
     </div>
   );

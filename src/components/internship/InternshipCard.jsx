@@ -17,9 +17,9 @@ export default function InternshipCard({ internship }) {
         <span className="rounded-full bg-slate-100 px-2.5 py-1 font-medium">
           {internship.level || "Beginner"}
         </span>
-        <span className="flex items-center gap-1">
-          <Icon name="Clock" className="h-3.5 w-3.5" />
-          Duration: TBA
+        <span className="flex items-center gap-1 font-semibold text-brand-navy">
+          <Icon name="Clock" className="h-3.5 w-3.5 text-brand-blue" />
+          Duration: {internship.duration || "3 - 6 Months"}
         </span>
       </div>
 

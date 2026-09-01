@@ -27,6 +27,7 @@ export default function ServicesPage() {
       <PageHero
         title="Our Technology Services"
         description="From your first idea to a production-ready product, we build technology designed to perform."
+        image="/projects/insight-analytics-platform.png"
       />
       <ServicesPreview showHeading={false} />
       <CTA />

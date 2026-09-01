@@ -7,6 +7,7 @@ export const site = {
     "Bynext AI builds modern web applications, mobile apps, custom software and AI-powered solutions for businesses.",
   phones: ["8984859057", "8118009341"],
   emails: ["bibhupbaliarsingh@gmail.com", "raytophankumar@gmail.com"],
+  location: "Bhubaneswar, Odisha, India",
   social: {
     linkedin: "https://linkedin.com",
     github: "https://github.com",

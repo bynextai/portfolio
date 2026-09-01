@@ -8,6 +8,7 @@ export const services = [
     description:
       "We design and build websites and web applications that load fast, rank well and scale with your business. Every build is engineered with clean architecture, strong SEO foundations and a maintainable codebase.",
     tags: ["Next.js", "React", "Node.js", "SEO"],
+    image: "/projects/shopflow-ecommerce.png",
     features: [
       "Business Websites",
       "Corporate Websites",
@@ -30,6 +31,7 @@ export const services = [
     description:
       "From native-feel cross-platform apps to full API integrations, we build mobile products that are fast, reliable and ready for the app stores.",
     tags: ["React Native", "Android", "iOS", "APIs"],
+    image: "/projects/fittrack-mobile-app.png",
     features: [
       "Android Applications",
       "iOS Applications",
@@ -38,54 +40,56 @@ export const services = [
       "Authentication",
       "Push Notifications",
     ],
-    ctaLabel: "Explore Mobile Apps",
+    ctaLabel: "Explore Mobile Application",
     metaTitle: "Mobile Application Development | Bynext AI",
     metaDescription:
-      "Bynext AI develops high-performance Android, iOS and cross-platform mobile applications with secure API integration.",
+      "Bynext AI develops Android and iOS mobile applications with strong API integration, clean design and reliable performance.",
   },
   {
     slug: "software-application",
-    icon: "AppWindow",
+    icon: "Cpu",
     title: "Software Application",
     shortDescription:
-      "Custom software solutions designed around organizational workflows and business requirements.",
+      "Custom software built around your exact operational workflows and business logic.",
     description:
-      "We build custom software that fits how your business actually works, from internal management tools to full enterprise systems.",
-    tags: ["MERN", "Python", "Database", "Cloud"],
+      "When off-the-shelf software falls short, we design custom systems, CRMs, internal tools and reporting portals that fit your team's exact workflow.",
+    tags: ["Custom Software", "CRMs", "APIs", "Dashboards"],
+    image: "/projects/enterprise-crm-system.png",
     features: [
-      "Business Management Systems",
-      "CRM",
-      "ERP",
-      "Billing Software",
-      "Management Dashboards",
-      "Custom Enterprise Software",
+      "Custom CRM Systems",
+      "Internal Business Tools",
+      "API Development & Integration",
+      "Database Architecture",
+      "Workflow Automation",
+      "Maintenance & Support",
     ],
-    ctaLabel: "Explore Software Solutions",
+    ctaLabel: "Explore Software Application",
     metaTitle: "Custom Software Application Development | Bynext AI",
     metaDescription:
-      "Bynext AI builds custom software applications including CRM, ERP and business management systems for growing companies.",
+      "Bynext AI builds custom software applications, CRMs, internal tools and backend architectures tailored to business processes.",
   },
   {
     slug: "ai-application",
-    icon: "Sparkles",
+    icon: "Bot",
     title: "AI Application",
     shortDescription:
       "Build intelligent applications using modern AI technologies to automate workflows and create smarter experiences.",
     description:
-      "We integrate modern AI capabilities into practical business tools — chatbots, assistants and automation that reduce manual work.",
-    tags: ["AI APIs", "Python", "Automation", "LLM"],
+      "We help businesses integrate practical artificial intelligence — from smart chatbots and document assistants to custom model integrations and workflow automation.",
+    tags: ["LLMs", "AI Chatbots", "Python", "Automation"],
+    image: "/projects/smartassist-ai-chatbot.png",
     features: [
-      "AI Chatbots",
-      "AI Assistants",
-      "AI Automation",
-      "AI Content Applications",
-      "AI Business Tools",
-      "AI API Integration",
+      "AI Chatbot Integration",
+      "Custom AI Assistant Tools",
+      "Workflow Automation",
+      "LLM API Integration",
+      "Data Processing Pipelines",
+      "Smart Content Assistants",
     ],
-    ctaLabel: "Explore AI Solutions",
-    metaTitle: "AI Application Development | Bynext AI",
+    ctaLabel: "Explore AI Application",
+    metaTitle: "AI Application Development & Integration | Bynext AI",
     metaDescription:
-      "Bynext AI builds AI-powered chatbots, assistants and automation tools that streamline business workflows.",
+      "Bynext AI develops AI-powered applications, chatbots, automated workflows and custom model integrations for modern businesses.",
   },
 ];
 

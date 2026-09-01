@@ -4,6 +4,7 @@ export const internships = [
     icon: "Layers",
     title: "MERN Stack Development",
     stack: "React • Node.js • Express • MongoDB",
+    duration: "6 Months",
     technologies: ["React", "Node.js", "Express", "MongoDB"],
     overview:
       "Learn to build complete full-stack applications using MongoDB, Express, React and Node.js, from database design through to deployment.",
@@ -32,6 +33,7 @@ export const internships = [
     icon: "Braces",
     title: "Python Full Stack Development",
     stack: "Python • FastAPI/Django • Database • Frontend",
+    duration: "6 Months",
     technologies: ["Python", "FastAPI", "Django", "Database", "Frontend"],
     overview:
       "Get hands-on with backend development in Python and connect it to a functional frontend, covering the full application lifecycle.",
@@ -59,28 +61,29 @@ export const internships = [
     slug: "web-development",
     icon: "Globe",
     title: "Web Development",
-    stack: "HTML • CSS • JavaScript • React",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    stack: "HTML • CSS • JavaScript • Bootstrap",
+    duration: "3 Months",
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     overview:
-      "Build a strong foundation in modern web development, from semantic HTML and responsive CSS through to interactive React interfaces.",
+      "Build a strong foundation in modern web development, from semantic HTML and responsive CSS layouts using Bootstrap through to interactive JavaScript applications.",
     learn: [
-      "Semantic HTML and accessibility basics",
-      "Responsive layouts with modern CSS",
-      "JavaScript fundamentals and DOM manipulation",
-      "Component-based development with React",
-      "Working with APIs on the frontend",
-      "Version control with Git",
+      "Semantic HTML5 and accessibility standards",
+      "Responsive layout design with Bootstrap framework",
+      "JavaScript fundamentals, DOM manipulation & ES6+",
+      "Building interactive UI components with Bootstrap & JS",
+      "Working with REST APIs and async JavaScript",
+      "Version control with Git and GitHub",
     ],
     projects: [
-      "Responsive landing page",
-      "Interactive React application",
-      "API-driven web project",
+      "Responsive business website with Bootstrap",
+      "Interactive JavaScript web app",
+      "API-integrated dynamic web portal",
     ],
     outcomes: [
-      "A solid foundation in frontend development",
-      "Comfort working with React",
-      "Real, deployable project experience",
-      "A better understanding of production code",
+      "Solid foundation in web development fundamentals",
+      "Mastery of HTML, CSS, JavaScript & Bootstrap",
+      "Real, deployable web projects for your portfolio",
+      "Understanding of responsive multi-device design",
     ],
   },
   {
@@ -88,6 +91,7 @@ export const internships = [
     icon: "Server",
     title: "DevOps",
     stack: "Linux • Git • Docker • CI/CD • Cloud",
+    duration: "3 Months",
     technologies: ["Linux", "Git", "Docker", "CI/CD", "Cloud"],
     overview:
       "Understand how modern applications are built, tested and deployed, with hands-on exposure to containers, pipelines and cloud environments.",
@@ -116,6 +120,7 @@ export const internships = [
     icon: "BrainCircuit",
     title: "AI Development",
     stack: "Python • AI APIs • Machine Learning • AI Applications",
+    duration: "6 Months",
     technologies: ["Python", "AI APIs", "Machine Learning", "AI Applications"],
     overview:
       "Explore how AI is applied in real products, from working with AI APIs to building small machine learning and automation projects.",
@@ -144,6 +149,7 @@ export const internships = [
     icon: "BarChart3",
     title: "Power BI & Data Analytics",
     stack: "Power BI • SQL • Data Visualization • Analytics",
+    duration: "3 Months",
     technologies: ["Power BI", "SQL", "Data Visualization", "Analytics"],
     overview:
       "Learn to turn raw data into clear business insights using Power BI, SQL and structured data analysis techniques.",
@@ -172,6 +178,7 @@ export const internships = [
     icon: "Database",
     title: "SQL & Database",
     stack: "SQL • MySQL • PostgreSQL • Database Design",
+    duration: "3 Months",
     technologies: ["SQL", "MySQL", "PostgreSQL", "Database Design"],
     overview:
       "Build a strong foundation in relational databases, from schema design to writing efficient, production-ready SQL queries.",

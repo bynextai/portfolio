@@ -1,10 +1,21 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, onViewProject }) {
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (onViewProject) {
+      onViewProject(project);
+    }
+  };
+
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-md shadow-slate-200/70 transition-transform transition-shadow transition-colors duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-blue/15 hover:border-brand-blue/30">
+    <div
+      id={project.id}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-md shadow-slate-200/70 transition-transform transition-shadow transition-colors duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-blue/15 hover:border-brand-blue/30"
+    >
       <div className={`relative flex h-52 w-full items-end justify-between overflow-hidden bg-gradient-to-br ${project.accent} p-4`}>
         {project.image && (
           <Image
@@ -27,23 +38,14 @@ export default function ProjectCard({ project }) {
         <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
           {project.description}
         </p>
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 border border-slate-200/60"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-        <Link
-          href={`/projects#${project.id}`}
-          className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-blue"
+        <button
+          type="button"
+          onClick={handleClick}
+          className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-blue hover:text-brand-blue-hover text-left cursor-pointer"
         >
-          View Project
+          View Project Details
           <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </Link>
+        </button>
       </div>
     </div>
   );

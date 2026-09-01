@@ -46,9 +46,9 @@ export default function InternshipDetail({ internship }) {
               {internship.overview}
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/70">
-              <span className="flex items-center gap-1.5">
+              <span className="flex items-center gap-1.5 font-semibold text-white">
                 <Clock className="h-4 w-4 text-brand-blue" aria-hidden="true" />
-                Duration: To Be Announced
+                Duration: {internship.duration || "3 - 6 Months"}
               </span>
               <span className="flex items-center gap-1.5">
                 <FolderKanban className="h-4 w-4 text-brand-blue" aria-hidden="true" />

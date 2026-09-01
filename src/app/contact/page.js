@@ -1,4 +1,4 @@
-import { Phone, Mail, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Globe } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
 import ContactForm from "@/components/contact/ContactForm";
@@ -29,6 +29,7 @@ export default function ContactPage() {
       <PageHero
         title="Let's Build Something Great Together"
         description="Reach out and let's discuss how Bynext AI can bring your project to life."
+        image="/projects/bi-reporting-suite.png"
       />
 
       <section className="bg-white py-16 sm:py-20">
@@ -43,6 +44,18 @@ export default function ContactPage() {
               </p>
 
               <dl className="mt-8 flex flex-col gap-6">
+                <div className="flex items-start gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-blue/10 text-brand-blue">
+                    <MapPin className="h-4.5 w-4.5" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <dt className="text-sm font-semibold text-brand-navy">Location</dt>
+                    <dd className="mt-1 text-sm font-medium text-slate-700">
+                      {site.location || "Bhubaneswar, Odisha, India"}
+                    </dd>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-3">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-blue/10 text-brand-blue">
                     <Phone className="h-4.5 w-4.5" aria-hidden="true" />

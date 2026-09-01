@@ -1,10 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import ProjectCard from "@/components/projects/ProjectCard";
+import ProjectModal from "@/components/projects/ProjectModal";
 import { projects } from "@/data/projects";
 
 export default function ProjectsPreview() {
+  const [selectedProject, setSelectedProject] = useState(null);
   const featured = projects.slice(0, 3);
 
   return (
@@ -16,7 +21,11 @@ export default function ProjectsPreview() {
         />
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onViewProject={(p) => setSelectedProject(p)}
+            />
           ))}
         </div>
         <div className="mt-10 flex justify-center">
@@ -25,6 +34,13 @@ export default function ProjectsPreview() {
           </Button>
         </div>
       </Container>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
   );
 }

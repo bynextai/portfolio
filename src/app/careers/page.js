@@ -32,6 +32,7 @@ export default function CareersPage() {
       <PageHero
         title="Build the Future of Technology with Us"
         description="Join a high-energy team of software engineers, AI specialists, and digital creators building state-of-the-art applications for modern businesses."
+        image="/projects/smartassist-ai-chatbot.png"
       />
 
       {/* Why Work With Us */}
@@ -95,12 +96,19 @@ export default function CareersPage() {
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Don't See the Right Fit?
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-sm text-white/70 sm:text-base">
-              We are always looking for exceptional engineers, designers, and innovators. Send us your resume and let's talk!
+            <p className="mx-auto mt-3 max-w-xl text-sm text-white/80 sm:text-base">
+              Send your CV directly to our hiring team at{" "}
+              <a href="mailto:bibhupbaliarsingh@gmail.com,raytophankumar@gmail.com" className="text-white font-semibold underline">
+                bibhupbaliarsingh@gmail.com
+              </a>{" "}
+              and{" "}
+              <a href="mailto:bibhupbaliarsingh@gmail.com,raytophankumar@gmail.com" className="text-white font-semibold underline">
+                raytophankumar@gmail.com
+              </a>
             </p>
             <div className="mt-6 flex justify-center">
-              <Button href="/contact" variant="outlineWhite">
-                Get in Touch
+              <Button href="mailto:bibhupbaliarsingh@gmail.com,raytophankumar@gmail.com" variant="outlineWhite">
+                Email Resume Directly
               </Button>
             </div>
           </div>

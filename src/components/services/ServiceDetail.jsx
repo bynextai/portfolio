@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
@@ -10,25 +11,45 @@ export default function ServiceDetail({ service }) {
 
   return (
     <>
-      <section className="border-b border-white/5 bg-brand-navy py-16 sm:py-20">
-        <Container>
+      <section className="relative overflow-hidden border-b border-slate-800 bg-slate-950 py-16 sm:py-20 lg:py-24">
+        {/* Background Image */}
+        {service.image && (
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={service.image}
+              alt={service.title}
+              fill
+              sizes="100vw"
+              className="object-cover object-center opacity-25 filter contrast-125 saturate-150"
+              priority
+            />
+            <div className="absolute inset-0 " />
+            <div className="absolute inset-0" />
+          </div>
+        )}
+
+        {/* Glow Accents */}
+        <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-brand-blue/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-blue-600/15 blur-3xl" />
+
+        <Container className="relative z-10">
           <div className="max-w-2xl">
             <div className="flex items-center gap-4">
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-blue/20 text-brand-blue">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-blue/20 text-brand-blue backdrop-blur-md border border-white/10">
                 <Icon name={service.icon} className="h-6 w-6" />
               </span>
               <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 {service.title}
               </h1>
             </div>
-            <p className="mt-4 text-base leading-relaxed text-white/70 sm:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-slate-200 sm:text-lg">
               {service.description}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {service.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/80"
+                  className="rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-medium text-white/90 backdrop-blur-md"
                 >
                   {tag}
                 </span>

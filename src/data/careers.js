@@ -23,6 +23,52 @@ export const careerBenefits = [
 
 export const openPositions = [
   {
+    id: "hr-specialist",
+    title: "HR Executive / Specialist",
+    department: "Human Resources",
+    type: "Full-Time",
+    location: "Remote",
+    experience: "0 - 2 Years (Freshers Welcome)",
+    description:
+      "We are seeking a proactive HR Executive / Specialist to handle talent acquisition, employee onboarding, team coordination, and HR operations in a fast-paced environment.",
+    responsibilities: [
+      "Source, screen, and coordinate interviews for prospective candidates across departments.",
+      "Manage employee onboarding, orientation, and team integration processes.",
+      "Maintain employee records, attendance, and HR documentation accurately.",
+      "Foster a positive team culture, organize internal engagement activities, and resolve workplace queries.",
+    ],
+    requirements: [
+      "Bachelor's degree in HR, Business Administration, or related field (Freshers welcome!).",
+      "Strong communication, interpersonal, and organizational skills.",
+      "Basic understanding of recruitment processes and HR best practices.",
+      "Ability to work independently in a remote team setting.",
+    ],
+  },
+  {
+    id: "digital-marketing-specialist",
+    title: "Digital Marketing Specialist",
+    department: "Marketing",
+    type: "Full-Time",
+    location: "Remote",
+    experience: "0 - 2 Years (Freshers Welcome)",
+    description:
+      "We are looking for an energetic Digital Marketing Specialist to execute social media campaigns, SEO strategies, content creation, and lead generation initiatives.",
+    responsibilities: [
+      "Plan, create, and schedule engaging content across LinkedIn, Twitter, Instagram, and YouTube.",
+      "Implement basic SEO strategies (on-page & keyword research) to improve organic search visibility.",
+      "Design digital ad campaigns and track marketing metrics (CTR, conversion rates, leads).",
+      "Collaborate with design and development teams to create marketing collateral and landing pages.",
+    ],
+    requirements: [
+      "0 - 2 years of experience in Digital Marketing, Social Media Management, or Content Creation (Freshers welcome!).",
+      "Familiarity with Canva, Google Analytics, Social Media platforms, and SEO basics.",
+      "Strong written & verbal communication skills with creative copywriting ability.",
+      "Self-motivated and excited to work remotely with a high-growth tech team.",
+    ],
+  },
+  /*
+  // PREVIOUS POSITIONS (COMMENTED OUT FOR NOW)
+  {
     id: "full-stack-developer",
     title: "Full Stack Developer (React / Next.js / Node.js)",
     department: "Engineering",
@@ -110,4 +156,5 @@ export const openPositions = [
       "Excellent communication and cross-functional collaboration skills.",
     ],
   },
+  */
 ];
