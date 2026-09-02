@@ -1,0 +1,7 @@
+# Allow search engines to index all public pages
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://bynextai.com/sitemap.xml

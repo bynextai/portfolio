@@ -9,20 +9,14 @@ import Industries from "@/components/home/Industries";
 import ProjectsPreview from "@/components/home/ProjectsPreview";
 import InternshipPreview from "@/components/home/InternshipPreview";
 import CTA from "@/components/home/CTA";
-import { site } from "@/data/site";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: { absolute: "Bynext AI | Web, Mobile, Software & AI Solutions" },
+export const metadata = buildMetadata({
+  title: "Bynext AI | Web, Mobile, Software & AI Solutions",
   description:
     "Bynext AI builds modern web applications, mobile apps, custom software and AI-powered solutions for businesses.",
-  alternates: { canonical: "/" },
-  openGraph: {
-    title: "Bynext AI | Web, Mobile, Software & AI Solutions",
-    description:
-      "Bynext AI builds modern web applications, mobile apps, custom software and AI-powered solutions for businesses.",
-    url: site.url,
-  },
-};
+  path: "/",
+});
 
 export default function Home() {
   return (

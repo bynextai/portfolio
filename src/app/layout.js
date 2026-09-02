@@ -12,18 +12,45 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.name} | ${site.tagline}`,
+  title: {
+    default: `${site.name} | ${site.tagline}`,
+    template: `%s | ${site.name}`,
+  },
   description: site.description,
+  keywords: [
+    "Bynext AI",
+    "AI Solutions",
+    "Web Development",
+    "Mobile Applications",
+    "Software Application",
+    "Custom Software",
+    "IT Services",
+    "Bhubaneswar",
+  ],
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/image.png", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   alternates: {
-    canonical: "/",
+    canonical: site.url,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     title: `${site.name} | ${site.tagline}`,
@@ -32,10 +59,10 @@ export const metadata = {
     siteName: site.name,
     images: [
       {
-        url: "/image.png",
+        url: `${site.url}/logo.png`,
         width: 1200,
-        height: 1200,
-        alt: "Bynext AI Logo",
+        height: 630,
+        alt: `${site.name} Logo`,
       },
     ],
     locale: "en_US",
@@ -45,11 +72,7 @@ export const metadata = {
     card: "summary_large_image",
     title: `${site.name} | ${site.tagline}`,
     description: site.description,
-    images: ["/image.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
+    images: [`${site.url}/logo.png`],
   },
 };
 
@@ -58,6 +81,9 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: site.name,
   url: site.url,
+  logo: `${site.url}/logo.png`,
+  image: `${site.url}/logo.png`,
+  description: site.description,
   email: site.emails[0],
   telephone: site.phones[0],
   sameAs: Object.values(site.social),
@@ -68,6 +94,7 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: site.name,
   url: site.url,
+  description: site.description,
 };
 
 export default function RootLayout({ children }) {

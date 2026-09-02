@@ -3,6 +3,7 @@ import { site } from "@/data/site";
 // Small helper to keep per-page metadata consistent and unique.
 export function buildMetadata({ title, description, path = "/", noIndex = false }) {
   const url = `${site.url}${path}`;
+  const imageUrl = `${site.url}/logo.png`;
   return {
     title: { absolute: title },
     description,
@@ -12,6 +13,14 @@ export function buildMetadata({ title, description, path = "/", noIndex = false 
       description,
       url,
       siteName: site.name,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
       locale: "en_US",
       type: "website",
     },
@@ -19,8 +28,21 @@ export function buildMetadata({ title, description, path = "/", noIndex = false 
       card: "summary_large_image",
       title,
       description,
+      images: [imageUrl],
     },
-    robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
+    robots: noIndex
+      ? { index: false, follow: false }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+          },
+        },
   };
 }
 
