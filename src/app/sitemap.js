@@ -2,6 +2,7 @@ import { site } from "@/data/site";
 import { services } from "@/data/services";
 import { internships } from "@/data/internships";
 
+/** @type {import('next').MetadataRoute.Sitemap} */
 export default function sitemap() {
   const staticRoutes = [
     "",

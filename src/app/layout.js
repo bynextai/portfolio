@@ -10,6 +10,7 @@ const inter = Inter({
   display: "swap",
 });
 
+/** @type {import('next').Metadata} */
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -33,7 +34,6 @@ export const metadata = {
       { url: "/favicon.ico", sizes: "any" },
       { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/logo.png", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
@@ -59,10 +59,10 @@ export const metadata = {
     siteName: site.name,
     images: [
       {
-        url: `${site.url}/logo.png`,
+        url: `${site.url}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: `${site.name} Logo`,
+        alt: `${site.name} - ${site.tagline}`,
       },
     ],
     locale: "en_US",
@@ -72,7 +72,7 @@ export const metadata = {
     card: "summary_large_image",
     title: `${site.name} | ${site.tagline}`,
     description: site.description,
-    images: [`${site.url}/logo.png`],
+    images: [`${site.url}/og-image.png`],
   },
 };
 
@@ -82,11 +82,11 @@ const organizationJsonLd = {
   name: site.name,
   url: site.url,
   logo: `${site.url}/logo.png`,
-  image: `${site.url}/logo.png`,
+  image: `${site.url}/og-image.png`,
   description: site.description,
   email: site.emails[0],
   telephone: site.phones[0],
-  sameAs: Object.values(site.social),
+  sameAs: Object.values(site.social).filter(Boolean),
 };
 
 const websiteJsonLd = {

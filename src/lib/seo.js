@@ -1,13 +1,17 @@
 import { site } from "@/data/site";
 
-// Small helper to keep per-page metadata consistent and unique.
-export function buildMetadata({ title, description, path = "/", noIndex = false }) {
-  const url = `${site.url}${path}`;
-  const imageUrl = `${site.url}/logo.png`;
+/**
+ * Helper to keep per-page metadata consistent and unique.
+ * @param {{ title: string; description: string; path?: string; noIndex?: boolean; image?: string }} options
+ * @returns {import('next').Metadata}
+ */
+export function buildMetadata({ title, description, path = "/", noIndex = false, image }) {
+  const url = `${site.url}${path.startsWith("/") ? path : `/${path}`}`;
+  const imageUrl = image || `${site.url}/og-image.png`;
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: url },
     openGraph: {
       title,
       description,
