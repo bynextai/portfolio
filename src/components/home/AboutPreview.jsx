@@ -5,11 +5,13 @@ import SectionHeading from "@/components/ui/SectionHeading";
 const cards = [
   {
     title: "Mission",
-    description: "Build reliable technology that solves real-world problems.",
+    description:
+      "We build intelligent technology that solves real business problems. Bynext AI helps organizations automate workflows, improve productivity, and turn ideas into scalable digital solutions.",
   },
   {
     title: "Vision",
-    description: "Become a trusted technology partner for businesses and innovators.",
+    description:
+      "We envision a world where AI is accessible to every business—helping teams work smarter, innovate faster, and create meaningful impact.",
   },
   {
     title: "Approach",
